@@ -160,3 +160,26 @@ Played a critical role in the application's visual identity. All backdrop images
 
 Served as the primary integrated development environment throughout the project. All Java source files, FXML resources, and image assets were managed within IntelliJ's project structure, and the application was compiled and tested through its built-in run configurations.
 
+
+
+## Prerequisites
+
+Before running Pathway Banking, ensure the following software is installed and properly configured on your system.
+
+### IntelliJ IDEA 
+
+The recommended IDE for opening, building, and running the project. The Community Edition is free and fully supports Maven-based JavaFX projects. When opening the project for the first time, IntelliJ will automatically detect the pom.xml file and prompt you to import the project as a Maven project, accept this prompt to ensure all dependencies are resolved correctly.
+ 
+### Java Development Kit (JDK) 21 or higher 
+
+Required to compile and run the application. The project was developed and tested against JDK 21, though later versions should remain compatible. You can verify your installed version by opening a terminal or command prompt and running "java --version". If JDK 21 is not installed, it can be downloaded from Oracle's official website or through some other open-source distribution. 
+
+### Apache Maven
+
+Required for dependency management and building the project. Maven reads the pom.xml file included in the repository and automatically downloads all necessary JavaFX modules and third party libraries. You can verify Maven is installed by running "mvn --version" in your terminal. If you are using IntelliJ IDEA, Maven is typically bundled with the IDE and does not require a separate installation.
+
+### SceneBuilder 25 
+
+Only required if you intend to edit the application's FXML layout files! 
+
+It's not needed to simply run the application. If you do plan to work with the FXML files, it is strongly recommended to apply the performance adjustment described at the top of this document by adding "java-options=-Xmx2048m" to your SceneBuilder.cfg file, as the application's FXML files contain a significant number of image based components that may cause lag or freezing without the additional memory allocation.
