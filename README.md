@@ -512,3 +512,66 @@ Once all 23 scenarios have been completed, a replay option appears at the bottom
 ### Filtering
 
 The scenario browser supports filtering by category and completion status. Users can narrow the list to show only Emergency Expense scenarios, only Completed scenarios, or any combination of category and status filters. This allows users to revisit specific types of financial situations or focus on scenarios they have not yet attempted.
+
+
+
+## Known Limitations
+
+Pathway Banking is a functional prototype built within an academic timeline. While the application delivers a complete and interactive financial learning experience, there are several limitations worth noting for anyone using or evaluating the software.
+
+### Retroactive Late Fees
+
+When the application is closed for an extended period and the user returns after multiple billing cycles have passed, only one late fee is applied per overdue entity upon reopening.
+
+The system does not calculate or apply fees for every missed cycle retroactively. 
+
+For example, if a Credit card payment was due three hours ago and the user just now opened the application, only a single $10 late fee is applied rather than the nine fees that would have accumulated across nine missed 20-minute cycles. This was a deliberate design choice to keep the prototype manageable, though a production version would ideally calculate all missed cycles on login.
+
+### Data Persistence Scope
+
+While the application saves all major data between sessions, including account balances, wallet balance, transaction history, notifications, scenario completion statuses, and owned assets, certain runtime states are not preserved. 
+
+Pending transfer requests created by contact transfer scenarios are not saved to file, meaning if the user closes the application with an outstanding transfer request, that obligation will not appear in the Payment section upon the next login. Additionally, the mandatory scenario toggle is intentionally reset to off every time the application closes.
+
+### Scenario Feedback Accuracy
+
+Some scenario feedback messages may not perfectly align with the user's actual financial outcome. 
+
+For example, a feedback popup might state that $20 was deducted, but if the user's Wallet only contained $5 at the time, the actual deduction was split across multiple accounts or partially absorbed as pending debt. The feedback popup does display a breakdown of where money was taken from, but the scenario's original narrative text was written to reflect the ideal case rather than every possible edge case.
+
+### Activity Tracker Grading
+
+The colored circle indicators in the Activity Tracker use a simplified grading system. Deposits and payments are always marked as green regardless of context, withdrawals are always red, and transfers are always yellow. 
+
+The system does not evaluate the broader financial wisdom of a transaction.
+For instance, depositing money into a Savings account and depositing money into a Debit account are both graded as equally positive, even though saving is generally the more financially responsible action. A more sophisticated grading system could evaluate transactions relative to the user's overall financial health, but this was beyond the scope of the prototype.
+
+### Single User Per Session
+
+The application supports multiple registered users stored in the same data files, but only one user can be logged in at a time. There is no multi-user concurrency or simultaneous session support. If two instances of the application were opened and logged into the same account, data corruption could occur as both instances would read and write to the same text files without any locking mechanism.
+
+### Text File Storage 
+
+All persistent data is stored in plain text files using a pipe-delimited format. 
+
+This approach was chosen for simplicity and readability during development, but it carries inherent limitations. 
+
+There is no encryption. User credentials including passwords are stored in plain text. 
+There is no transaction level integrity. If the application crashes mid-save, partial writes could corrupt the data files. 
+And there is no query capability. Loading data requires reading entire files and parsing every line, which could become slow with very large datasets. 
+
+### Log Capacity
+
+Transaction history, wallet events, and notifications are each capped at 100 entries. When the cap is reached, the oldest entry is removed to make room for the newest one. This means users who are very active over long sessions may lose visibility into their earliest transactions. The cap was implemented to prevent performance degradation from unbounded list growth.
+
+### Subscription Billing Cycle 
+
+Subscription billing cycles operate on a 20-minute interval rather than a realistic monthly or weekly period. This was a deliberate choice to ensure that users can experience the full lifecycle of a subscription, from payment to overdue to late fee accumulation, within a single session. 
+
+While this makes the mechanic experienceable during a demo or classroom setting, it does not accurately reflect real world billing timelines.
+
+### No Undo or Reversal
+
+There is no mechanism to undo or reverse a financial action once it has been processed. If a user accidentally deposits the wrong amount, transfers to the wrong contact, or sells an asset by mistake, the action is permanent. 
+
+This was an intentional design decision to reinforce the real-world principle that financial transactions cannot simply be taken back, though a production version might include a brief confirmation window or a limited undo grace period for certain actions.
