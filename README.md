@@ -409,3 +409,106 @@ Transfer-related scenarios bypass this system entirely. The money only moves whe
 ### Random Contact Transfers
 
 Every minute while the application is running, there is a chance that one of the user's nine simulated contacts will send them a random transfer between $5 and $25. These transfers are deposited directly into the Wallet and trigger the auto-payment check for pending debt. A notification appears in the Inbox identifying which contact sent the money and how much was received.
+
+
+
+## Scenario System
+
+The scenario system is the educational backbone of Pathway Banking. 
+
+It places users in realistic financial situations and asks them to make decisions that carry real consequences within the application. Rather than teaching financial concepts through passive reading, the scenario system forces active participation. Every choice directly impacts the user's Wallet, bank accounts, credit standing, asset portfolio, and notification history.
+
+### Scenario Library
+
+The application contains 23 predefined financial scenarios, each designed around a relatable situation that a young person might encounter in everyday life. Scenarios range from simple decisions like what to do with birthday money or how to spend lunch funds for the week, to more complex situations involving emergency repairs, subscription management, utility bills, and interpersonal lending. Every scenario presents two to four response options, and no two options carry the same financial and educational weight.
+
+### Categories
+
+Scenarios are organized into four categories. 
+
+Everyday Spending scenarios involve common purchasing decisions where the user must balance wants against needs and short term enjoyment against long term savings. 
+
+Emergency Expense scenarios present unexpected costs that demand immediate attention, testing the user's ability to prioritize and respond under pressure. 
+
+Bills and Expenses scenarios introduce recurring obligations like subscriptions, utility bills, and phone plans, teaching users about the ongoing nature of financial commitments.
+
+Income Opportunity scenarios present situations where the user can earn money, challenging them to decide how to allocate their earnings between saving, spending, and reinvesting.
+
+### Difficulty Levels
+
+Each scenario is assigned either a Beginner or Advanced difficulty level. 
+
+Beginner scenarios present straightforward financial decisions with clearly defined outcomes, making them appropriate for younger users who are just beginning to learn about money. 
+
+Advanced scenarios involve more nuanced situations with multiple financial factors at play, where the best choice may not be immediately obvious and the consequences are more significant. 
+
+When the application is in Child-mode, it is automatically activated for users under the age of 12 based on their date of birth. Advanced scenarios are hidden entirely from the scenario browser and excluded from mandatory scenario interrupts, ensuring that younger users are never overwhelmed by complexity beyond their level.
+
+### Scenario Flow
+
+When a user selects a scenario from the browser, they are taken to the Scenario Activity screen. 
+
+The situation is presented in a chat bubble at the top of the screen, with response options displayed as clickable buttons below. 
+
+A difficulty badge in the corner indicates whether the scenario is Beginner or Advanced. 
+
+If the user is unsure about which option to choose, the Idea button provides a general hint that encourages thoughtful decision making without revealing or pursuading the correct answer outright. 
+
+After selecting a response, the system processes the financial consequences, updates all affected balances, records the transaction in the Activity Tracker, sends a notification to the Inbox, and presents a detailed feedback popup explaining whether the outcome was positive, cautionary, or negative. 
+Along with a breakdown of exactly where the money went or came from.
+
+### Financial Consequences
+
+Positive scenario outcomes deposit reward money directly into the Wallet. 
+Negative outcomes follow the application's deduction priority. Pulling funds from the Wallet first, then Credit cards, then the Debit account, and finally accumulating as pending debt if no accounts can cover the cost. 
+
+The feedback popup at the end of each scenario displays a detailed breakdown of these deductions, showing the user exactly how much was taken from each source. This transparency is intentional, reinforcing the connection between poor financial decisions and their cascading impact across multiple accounts.
+
+### Asset Rewards
+
+Certain scenarios reward the user with virtual assets upon selecting specific responses. These assets fall into two categories, one-time items and subscriptions. 
+
+One-time items like the Piggy Bank, Savings Journal, Repair Kit, Online Seller Badge, and Headphones are added to the user's asset portfolio and can be sold later for a resale value deposited into the Wallet. 
+
+Subscription items like Gaming, Streaming, Electric Utility, Water Utility, and Phone Plan services are also added to the portfolio but come with recurring costs on a 20-minute billing cycle. 
+
+Earning a subscription through a scenario teaches the user that some financial commitments extend beyond a single transaction, they require ongoing attention and payment to avoid accumulating late fees.
+
+### Contact Transfer Scenarios
+
+Five of the 23 scenarios involve transferring money to a simulated contact. 
+
+These scenarios present situations where a family member or friend needs financial help. 
+A sibling needs money for school supplies, a friend needs a ride home, or a parent needs help with groceries. 
+
+When the user selects a response that involves sending money, a prompt appears asking whether they would like to transfer the funds immediately or defer the payment. 
+
+If they choose to transfer immediately and have sufficient funds in their Debit account, the transfer is processed on the spot. 
+
+If they choose to defer or lack the funds, a transfer request is created and added to the Payment section in Deposit and Withdraw, where it remains until the user completes it on their own terms. 
+
+Unlike standard scenario deductions, contact transfer scenarios do not pull money automatically from the user's accounts. The funds only move when the user explicitly completes the transfer, simulating the voluntary nature of lending money to others.
+
+### Mandatory Scenarios
+All Emergency Expense scenarios are designated as mandatory. 
+
+When the user enables the Toggle Mandatory feature in the scenario browser, these emergency scenarios can interrupt normal application use at random intervals. 
+Every five minutes, the system checks whether a mandatory scenario is available and, if so, presents an interruption popup that cannot be closed or dismissed. 
+
+The user must click "Handle It" to proceed. They are then transported to the Scenario Activity screen where the back button and help button are disabled until the scenario is completed. 
+
+This mechanic simulates the unpredictable nature of real financial emergencies, where expenses arise without warning and demand immediate attention regardless of what else is happening. 
+
+Once all mandatory scenarios have been completed, they automatically reset to Available and begin cycling again, ensuring that emergency preparedness is an ongoing practice rather than a one time exercise. 
+
+When the user closes the application, the mandatory toggle is automatically turned off so that returning to the application does not immediately trigger an interruption.
+
+### Completion and Replay
+
+Each scenario tracks its completion status as Available, In Progress, or Completed. When a user opens a scenario but navigates away without finishing it, the scenario remains marked as In Progress so they can return to it later. 
+
+Once all 23 scenarios have been completed, a replay option appears at the bottom of the scenario browser, allowing the user to reset every scenario back to Available and experience them again. Potentially making different choices and observing different outcomes.
+
+### Filtering
+
+The scenario browser supports filtering by category and completion status. Users can narrow the list to show only Emergency Expense scenarios, only Completed scenarios, or any combination of category and status filters. This allows users to revisit specific types of financial situations or focus on scenarios they have not yet attempted.
