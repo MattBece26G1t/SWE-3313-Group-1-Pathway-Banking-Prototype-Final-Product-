@@ -68,6 +68,8 @@ The core philosophy behind Pathway Banking is that financial literacy is best le
 
 Additionally, from a course perspective that the project was actualized from, the application was built to reflect the full software development lifecycle, from initial requirements gathering and system design to implementation, testing, and now delivery. The project's Software Design Document served as the main architectural blueprint throughout development, outlining seven key subsystems: User Authentication, Dashboard and Navigation, Banking Operations, Educational Features, Wallet and Assets, System Services, and Data Persistence.
 
+
+
 ## Features
 
 Pathway Banking offers a wide range of financial tools and educational features, all designed to simulate a realistic banking experience within a controlled learning environment.
@@ -127,3 +129,34 @@ Every section of the application includes a dedicated Help screen with two tabs,
 ### Data Persistence
 
 All user data is saved between sessions, including account balances, wallet balance, transaction history, wallet events, notifications, scenario completion status, and owned assets. Data is automatically saved when the user logs out or closes the application, and is fully restored upon the next login.
+
+
+
+## Tech Stack
+
+Pathway Banking was built using a focused set of tools and technologies selected for their reliability, accessibility, and compatibility with desktop application development.
+
+### Java 21
+
+The core programming language for the entire application. All backend logic, data management, financial mechanics, and controller behavior are written in Java, leveraging its object-oriented structure to organize the application into clearly defined classes and subsystems.
+
+### JavaFX 21
+
+Provided the graphical user interface framework. Every screen in the application is rendered through JavaFX's scene graph system, utilizing FXML files for layout structure and Java controllers for interactive behavior. JavaFX's built-in support for styled alerts, combo boxes, scroll panes, image views, and timeline animations made it possible to create a polished and responsive user experience without relying on external UI libraries.
+
+### SceneBuilder 25
+
+Used as the visual layout editor for all FXML files. Each of the application's 18 screens was designed in SceneBuilder, where backdrop images, buttons, labels, text fields, and other interactive elements were positioned and configured before being wired to their corresponding Java controllers.
+
+### Maven
+
+Handled project build management and dependency resolution. The project's pom.xml defines all required JavaFX modules and third party libraries, ensuring consistent builds across different development environments.
+
+### Draw.io
+
+Played a critical role in the application's visual identity. All backdrop images, icons, popup graphics, asset sprites, scenario badges, and container elements were designed in Draw.io and exported as transparent PNG files. This approach allowed the team to create a fully custom visual aesthetic while keeping SceneBuilder's workload minimal. Reducing lag and performance issues that arose from designing complex visuals directly within the IDE.
+
+### IntelliJ IDEA
+
+Served as the primary integrated development environment throughout the project. All Java source files, FXML resources, and image assets were managed within IntelliJ's project structure, and the application was compiled and tested through its built-in run configurations.
+
