@@ -185,3 +185,133 @@ Only required if you intend to edit the application's FXML layout files!
 It's not needed to simply run the application. If you do plan to work with the FXML files, it is strongly recommended to apply the performance adjustment described at the top of this document by adding "java-options=-Xmx2048m" to your SceneBuilder.cfg file, as the application's FXML files contain a significant number of image based components that may cause lag or freezing without the additional memory allocation.
 
 ## How to Run
+
+Follow these steps to clone the repository and run Pathway Banking on to your local machine.
+
+**Step 1 - Clone the Repository:** Download the repository as a ZIP file directly from GitHub by clicking the green "Code" button and selecting "Download ZIP." Extract the contents to location of your choice
+
+**Step 2 - Open the Project in Intellij IDEA:** Launch IntelliJ IDEA and select "Open" from the welcome screen. Navigate to the folder where you extracted the project and select it. IntelliJ will detect the pom.xml file and prompt you to import the project as a Maven project. Click on depending what is presented, "Import" or "Load Maven Project," to allow IntelliJ to download all required dependencies automatically.
+
+**Step 3 - Verify Project Structure:** Once the project has loaded, confirm the project structure is intact. View the project panel on the left side of IntelliJ and confirm its file strcture matches similarly to the presentation of the GitHub files
+
+**Step 4 - Configure the Run Configuration:** In most cases, IntelliJ will automatically detect the main class. If it does not, you can set it up manually. Go to "Run" in the top menu bar, select "Edit Configurations," click the "+" button to add a new Application configuration, and set the Main Class to org.example.pathwayver1.Launcher. Click "Apply" and then "OK."
+
+**Step 5 - Run the Application:** Click the green Run button in the top right corner of IntelliJ, or press Shift+F10. Maven will compile the project and launch the application. The Pathway Banking login screen should appear in a 900x600 window.
+
+**Step 6 - Register a New Pathway Banking Account:** Since this is your first time running the application, there will be no existing user data. Click the "Register Here!" hyperlink on the login screen and follow the guided multi-step registration process to create your account. Upon completion, you will be assigned a unique UserID and password that you will use to log in for all future sessions.
+
+**Step 7 - Explore the Application:** After logging in, you will land on the Dashboard. From here you can navigate freely between all sections of the application using the bottom navigation tabs, top icon buttons, and interactive elements throughout each screen. Your progress is automatically saved when you log out or close the application.
+
+
+## Project Structure
+
+The project follows a standard Maven directory layout with all source code, resources, and configuration files organized under the **src** folder.
+
+### Root Directory
+
+The root of the repository contains **pom.xml**, which defines all project dependencies and build configurations, and **.gitignore**, which excludes IDE settings, build outputs, and user save data from version control.
+
+### Java Source Files
+
+All Java source files are located in **src/main/java/org/example/pathwayver1/**. This directory contains every class that powers the application. 
+
+- **MainApp.java** is the primary entry point that extends JavaFX's Application class, initializes the login screen, manages global timers for late fee checking and mandatory scenario interrupts, and handles application wide save operations. 
+
+- **Launcher.java** is a simple wrapper class that calls MainApp to avoid module system complications with JavaFX.
+
+The source files are organized by function. The model and data classes include: 
+
+- **UserAccount.java** for user profile and credential management 
+- **Account.java** for individual banking accounts with support for Debit, Savings, and Credit types
+- **Wallet.java** and **WalletManager.java** for virtual cash storage and event tracking
+- **WalletEvent.java** for recording wallet activity
+- **TransactionRecord.java** for logging all financial actions
+- **BankingManager.java** for processing deposits, withdrawals, transfers, payments, late fee checks, and random contact transfers
+- **Scenario.java** and **ScenarioManager.java** for the educational scenario library and completion tracking
+- **FeedbackMessage.java** and **FeedbackManager.java** for generating and storing scenario outcome feedback
+- **Asset.java** and **AssetManager.java** for managing owned items and recurring subscriptions
+- **Notification.java** and **NotificationManager.java** for the inbox messaging system
+- **TransferRequest.java** for tracking contact transfer obligations created by scenarios
+- **HelpEntry.java** and **HelpManager.java** for storing all FAQ and interface help content
+- **FileHandler.java** for low-level file read and write operations
+- **DataManager.java** for saving and loading all user data across eight persistent text files
+  
+The controller classes include: 
+
+- **LoginController.java** for login with lockout protection
+- **RegistrationController.java** for the multi-step account creation process
+- **RecoverIDController.java** for account recovery through email or phone lookup
+- **ResetPassController.java** for password reset with support for both login and settings entry points
+- **DashboardController.java** for the central hub displaying all account and activity data
+- **AccountBalanceController.java** for viewing, unlocking, and managing banking accounts
+- **DepositWithdrawController.java** for deposits, withdrawals, transfers, and payments
+- **TransferAccountController.java** for account-to-account transfers with savings fee logic and delete mode support
+- **TransferContactListController.java** for browsing the simulated contact list
+- **TransferContactConfirmController.java** for confirming contact transfers with prefill support for scenario-generated requests
+- **PaymentController.java** for processing credit card, subscription, pending debt, and transfer request payments
+- **ActivityTrackerController.java** for displaying filtered and color-coded transaction history
+- **WalletController.java** for viewing wallet balance and event history
+- **ScenarioController.java** for browsing, filtering, and toggling mandatory scenarios
+- **ScenarioActivityController.java** for presenting scenario situations, processing responses, applying financial consequences, and awarding assets
+- **AssetsController.java** for viewing owned items and managing sales or subscription cancellations
+- **InboxController.java** for viewing, filtering, and reading notifications
+- **SettingsController.java** for editing user profile information and initiating password changes
+- **HelpController.java** for displaying FAQ and interface help content for every section
+- **DebitDetailController.java** for viewing debit account details and transaction history
+- **SavingsDetailController.java** for viewing savings account details with withdraw fee status and account deletion
+- **CreditDetailController.java** for viewing credit account details with balance owed, credit limit, minimum payment, and payment initiation
+  
+### FXML Files
+
+All FXML layout files are located in **src/main/resources/org/example/pathwayver1/**. Each FXML file corresponds to a screen in the application and defines the layout, positioning, and visual structure of that screen. 
+
+The main 900x600 screens include:
+
+- **LoginView.fxml**
+- **RegistrationView.fxml**
+- **RecoverIDView.fxml**
+- **ResetPassView.fxml**
+- **DashboardView.fxml**
+- **AccountBalanceView.fxml**
+- **DepositWithdrawView.fxml**
+- **ActivityTrackerView.fxml**
+- **WalletView.fxml**
+- **ScenarioView.fxml**
+- **ScenarioActivityView.fxml**
+- **AssetsView.fxml**
+- **InboxView.fxml**
+- **SettingsView.fxml**
+- **HelpView.fxml**
+- **DebitDetailView.fxml**
+- **SavingsDetailView.fxml**
+- **CreditDetailView.fxml**
+
+The smaller popup windows include: 
+
+- **TransferAccountView.fxml** at 750x500
+- **TransferContactListView.fxml** at 750x500
+- **TransferContactConfirmView.fxml** at 750x500
+- **PaymentView.fxml** at 675x530
+
+### Image Assets
+
+All PNG image files are stored in **src/main/resources/org/example/pathwayver1/images/**. This directory contains every visual element used throughout the application: screen backdrops, popup icons, account card graphics, toggle indicators, difficulty badges, notification indicators, inbox containers, asset item icons, and all other graphical elements. 
+
+Every image was designed in Draw.io and exported as a transparent PNG to maintain a consistent visual identity while minimizing SceneBuilder's rendering workload.
+
+### Data Persistence
+
+When the application runs for the first time, it creates a **pathway_data** directory in the project root containing eight text files: 
+
+- **users.txt** for user account credentials and profile data
+- **accounts.txt** for banking account balances and configurations
+- **wallet.txt** for wallet balances, transactions.txt for transaction history
+- **notifications.txt** for inbox messages, assets.txt for owned items and subscription states
+- **scenarios.txt** for scenario completion statuses
+- **wallet_events.txt** for wallet activity logs
+
+This directory is excluded from version control through the **.gitignore file**, as it contains user-specific session data that is generated at runtime.
+
+### Module Configuration
+
+The **module-info.java** file located in **src/main/java/** declares the application's module dependencies, granting access to JavaFX controls, FXML loading, and graphics rendering, and opens the application package for reflection based FXML injection.
