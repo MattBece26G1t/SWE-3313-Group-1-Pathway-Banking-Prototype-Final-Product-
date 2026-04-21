@@ -1,4 +1,4 @@
-# SWE 3313 Group 1 Pathway Banking Prototype Final Product-
+# SWE 3313 Group 1 Pathway Banking Prototype Final Product
 
 ## Relevant Course Information
 
