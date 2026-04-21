@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.DepositWithdrawController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/depositwithdrawbackdrop.drawio.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="walletBalanceLabel" layoutX="778.0" layoutY="150.0" prefHeight="31.0" prefWidth="116.0" rotate="-6.1" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="depositAmountField" alignment="CENTER_RIGHT" layoutX="119.0" layoutY="147.0" prefHeight="37.0" prefWidth="231.0" style="-fx-background-color: transparent;; -fx-border-color: transparent;;">
+         <font>
+            <Font name="Myanmar Text Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="withdrawAmountField" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="361.0" prefHeight="37.0" prefWidth="231.0" style="-fx-background-color: transparent;; -fx-border-color: transparent;;">
+         <font>
+            <Font name="Myanmar Text Bold" size="16.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="depositAccountSelector" layoutX="94.0" layoutY="222.0" prefHeight="31.0" prefWidth="258.0" />
+      <ComboBox fx:id="withdrawAccountSelector" layoutX="101.0" layoutY="436.0" prefHeight="31.0" prefWidth="258.0" />
+      <ComboBox fx:id="paymentEntitySelector" layoutX="462.0" layoutY="338.0" prefHeight="31.0" prefWidth="258.0" />
+      <Label fx:id="paymentBalanceOwedLabel" alignment="CENTER_RIGHT" layoutX="498.0" layoutY="411.0" prefHeight="31.0" prefWidth="223.0" text="Label" textAlignment="RIGHT" textFill="#c75436">
+         <font>
+            <Font name="Myanmar Text Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="helpButton" layoutX="807.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="transferAccountButton" layoutX="462.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleTransferAccount" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="transferContactButton" layoutX="610.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleTransferContact" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="depositButton" layoutX="180.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleDeposit" prefHeight="31.0" prefWidth="86.0" text="DEPOSIT!">
+         <font>
+            <Font name="Jokerman" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="withdrawButton" layoutX="177.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleWithdraw" prefHeight="31.0" prefWidth="107.0" text="WITHDRAW!">
+         <font>
+            <Font name="Jokerman" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="payButton" layoutX="548.0" layoutY="469.0" mnemonicParsing="false" onAction="#handlePay" prefHeight="31.0" prefWidth="86.0" text="PAY!">
+         <font>
+            <Font name="Jokerman" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="104.0" layoutY="538.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="275.0" layoutY="538.0" mnemonicParsing="false" onAction="#handleAccountBalance" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="445.0" layoutY="538.0" mnemonicParsing="false" onAction="#handleDepositWithdraw" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="618.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleActivityTracker" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="walletButton" layoutX="749.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleWallet" prefHeight="40.0" prefWidth="146.0" rotate="-5.1" style="-fx-background-color: transparent;;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.AccountBalanceController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/accountbalancessection.drawio.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="debitBalanceLabel" alignment="CENTER_RIGHT" layoutX="123.0" layoutY="270.0" prefHeight="40.0" prefWidth="186.0" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="debitAccountNumLabel" layoutX="94.0" layoutY="217.0" prefHeight="40.0" prefWidth="232.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="debitActivityLabel" alignment="CENTER" layoutX="114.0" layoutY="394.0" prefHeight="63.0" prefWidth="179.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="105.0" layoutY="536.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="274.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleAccountBalance" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="445.0" layoutY="534.0" mnemonicParsing="false" onAction="#handleDepositWithdraw" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="617.0" layoutY="534.0" mnemonicParsing="false" onAction="#handleActivityTracker" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="helpButton" layoutX="808.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: transparent;;" />
+      <ImageView fx:id="slot2AddCard" fitHeight="358.0" fitWidth="241.0" layoutX="334.0" layoutY="132.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/colapsedaddbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3AddCard" fitHeight="358.0" fitWidth="241.0" layoutX="582.0" layoutY="132.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/colapsedaddbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="slot2AddButton" layoutX="399.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleSlot2Add" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="slot3AddButton" layoutX="645.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleSlot3Add" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: transparent;;" />
+      <ImageView fx:id="slot2AddExpanded" fitHeight="358.0" fitWidth="248.0" layoutX="333.0" layoutY="131.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/addaccbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3AddExpanded" fitHeight="358.0" fitWidth="248.0" layoutX="581.0" layoutY="131.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/addaccbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="slot2AddToggleClose" layoutX="399.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleSlot2Add" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot3AddToggleClose" layoutX="645.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleSlot3Add" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot2AddCredit" layoutX="372.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleSlot2AddCredit" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot2AddSavings" layoutX="376.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleSlot2AddSavings" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot3AddCredit" layoutX="618.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleSlot3AddCredit" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot3AddSavings" layoutX="621.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleSlot3AddSavings" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: transparent;;" visible="false" />
+      <ImageView fx:id="slot2CreditCard" fitHeight="424.0" fitWidth="291.0" layoutX="306.0" layoutY="96.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/credbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3CreditCard" fitHeight="424.0" fitWidth="291.0" layoutX="553.0" layoutY="96.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/credbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="slot1ViewDetails" layoutX="136.0" layoutY="481.0" mnemonicParsing="false" onAction="#handleSlot1ViewDetails" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="slot2CreditViewDetails" layoutX="394.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleSlot2ViewDetails" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot3CreditViewDetails" layoutX="633.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleSlot3ViewDetails" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Label fx:id="slot2CreditAccountNumLabel" layoutX="342.0" layoutY="217.0" prefHeight="31.0" prefWidth="226.0" text="Label" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3CreditAccountNumLabel" layoutX="588.0" layoutY="217.0" prefHeight="31.0" prefWidth="226.0" text="Label" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot2CreditBalanceLabel" alignment="CENTER_RIGHT" layoutX="379.0" layoutY="270.0" prefHeight="40.0" prefWidth="179.0" text="Label" textAlignment="RIGHT" textFill="#16911b" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3CreditBalanceLabel" alignment="CENTER_RIGHT" layoutX="624.0" layoutY="270.0" prefHeight="40.0" prefWidth="179.0" text="Label" textAlignment="RIGHT" textFill="#16911b" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot2CreditActivityLabel" alignment="CENTER" layoutX="354.0" layoutY="412.0" prefHeight="53.0" prefWidth="197.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3CreditActivityLabel" alignment="CENTER" layoutX="605.0" layoutY="412.0" prefHeight="53.0" prefWidth="186.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot2CreditPayDueLabel" alignment="CENTER_RIGHT" layoutX="422.0" layoutY="328.0" prefHeight="31.0" prefWidth="131.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3CreditPayDueLabel" alignment="CENTER_RIGHT" layoutX="670.0" layoutY="328.0" prefHeight="31.0" prefWidth="131.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="slot2SavingsCard" fitHeight="389.0" fitWidth="271.0" layoutX="304.0" layoutY="132.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/savingsbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot3SavingsCard" fitHeight="389.0" fitWidth="271.0" layoutX="553.0" layoutY="132.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/savingsbalance.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="slot2SavingsViewDetails" layoutX="394.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleSlot2ViewDetails" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Button fx:id="slot3SavingsViewDetails" layoutX="640.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleSlot3ViewDetails" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: transparent;;" visible="false" />
+      <Label fx:id="slot2SavingsBalanceLabel" alignment="CENTER_RIGHT" layoutX="372.0" layoutY="268.0" prefHeight="40.0" prefWidth="186.0" text="Label" textAlignment="RIGHT" textFill="#16911b" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3SavingsBalanceLabel" alignment="CENTER_RIGHT" layoutX="621.0" layoutY="268.0" prefHeight="40.0" prefWidth="186.0" text="Label" textAlignment="RIGHT" textFill="#16911b" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot2SavingsAccountNumLabel" layoutX="339.0" layoutY="213.0" prefHeight="40.0" prefWidth="232.0" text="Label" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3SavingsAccountNumLabel" layoutX="589.0" layoutY="214.0" prefHeight="40.0" prefWidth="232.0" text="Label" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot2SavingsActivityLabel" alignment="CENTER" layoutX="362.0" layoutY="394.0" prefHeight="63.0" prefWidth="186.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="slot3SavingsActivityLabel" alignment="CENTER" layoutX="613.0" layoutY="394.0" prefHeight="63.0" prefWidth="186.0" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

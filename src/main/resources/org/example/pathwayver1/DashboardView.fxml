@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.DashboardController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/dashboard_bg.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="welcomeLabel" layoutX="156.0" layoutY="96.0" prefHeight="74.0" prefWidth="524.0" text="Label" textFill="#c49063">
+         <font>
+            <Font name="Myanmar Text Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="debitBalanceLabel" alignment="CENTER_RIGHT" layoutX="176.0" layoutY="269.0" prefHeight="27.0" prefWidth="154.0" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="walletBalanceLabel" layoutX="782.0" layoutY="187.0" prefHeight="40.0" prefWidth="111.0" rotate="-7.1" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="activityOverviewLabel" layoutX="436.0" layoutY="243.0" prefHeight="53.0" prefWidth="246.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="scenarioOverviewLabel" alignment="TOP_LEFT" layoutX="398.0" layoutY="380.0" prefHeight="98.0" prefWidth="289.0" text="Label" textFill="#485344" wrapText="true">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="107.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="272.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleAccountBalance" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="444.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleDepositWithdraw" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="614.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleActivityTracker" prefHeight="53.0" prefWidth="146.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="scenarioButton" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleScenario" prefHeight="90.0" prefWidth="104.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="helpButton" layoutX="224.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="settingsButton" layoutX="723.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSettings" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="logoutButton" layoutX="818.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="65.0" prefWidth="55.0" style="-fx-background-color: transparent;;" />
+      <Button layoutX="745.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleAssets" prefHeight="40.0" prefWidth="146.0" rotate="-6.3" style="-fx-background-color: transparent;;" />
+      <Button layoutX="747.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleWallet" prefHeight="40.0" prefWidth="146.0" rotate="-6.0" style="-fx-background-color: transparent;;" />
+      <ImageView fx:id="inboxAlert" fitHeight="90.0" fitWidth="132.0" layoutX="578.0" layoutY="-1.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/mailnum.drawio.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="notificationCountLabel" alignment="CENTER" layoutX="651.0" layoutY="5.0" prefHeight="23.0" prefWidth="40.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Myanmar Text Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="inboxButton" layoutX="608.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleInbox" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: transparent;;" />
+      <ImageView fx:id="slot1SavingsIcon" fitHeight="94.0" fitWidth="289.0" layoutX="46.0" layoutY="289.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/savingsdboverview.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot1CreditIcon" fitHeight="175.0" fitWidth="322.0" layoutX="13.0" layoutY="254.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/creditdboverview.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot2SavingsIcon" fitHeight="94.0" fitWidth="289.0" layoutX="46.0" layoutY="350.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/savingsdboverview.drawio.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="slot2CreditIcon" fitHeight="175.0" fitWidth="322.0" layoutX="13.0" layoutY="315.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@images/creditdboverview.drawio.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="accountSlot2BalanceLabel" alignment="CENTER_RIGHT" layoutX="197.0" layoutY="389.0" prefHeight="40.0" prefWidth="132.0" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountSlot1BalanceLabel" alignment="CENTER_RIGHT" layoutX="197.0" layoutY="330.0" prefHeight="40.0" prefWidth="132.0" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
