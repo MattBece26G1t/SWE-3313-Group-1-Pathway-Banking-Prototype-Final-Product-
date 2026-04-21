@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.PaymentController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="675.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/paymentview.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="helpButton" layoutX="595.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="35.0" prefWidth="39.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="backButton" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="42.0" prefWidth="109.0" style="-fx-background-color: transparent;;" />
+      <TextField fx:id="paymentAmountField" alignment="CENTER_RIGHT" layoutX="221.0" layoutY="380.0" prefHeight="29.0" prefWidth="245.0" style="-fx-border-color: transparent;; -fx-background-color: transparent;;" />
+      <Button fx:id="payButton" layoutX="280.0" layoutY="426.0" mnemonicParsing="false" onAction="#handlePay" prefHeight="35.0" prefWidth="116.0" text="PAY!">
+         <font>
+            <Font name="Jokerman" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="entityNameLabel" layoutX="135.0" layoutY="82.0" prefHeight="22.0" prefWidth="373.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountDueLabel" alignment="CENTER" layoutX="167.0" layoutY="135.0" prefHeight="23.0" prefWidth="305.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentDueDateLabel" alignment="CENTER" layoutX="167.0" layoutY="178.0" prefHeight="23.0" prefWidth="305.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="detailLabel1" alignment="CENTER" layoutX="169.0" layoutY="222.0" prefHeight="23.0" prefWidth="305.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="detailLabel2" alignment="CENTER" layoutX="169.0" layoutY="266.0" prefHeight="23.0" prefWidth="305.0" text="Label">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="68.0" layoutY="469.0" prefHeight="34.0" prefWidth="541.0" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountDueLabel1" alignment="CENTER" layoutX="372.0" layoutY="11.0" prefHeight="25.0" prefWidth="183.0" text="Select an account to pay with:" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Myanmar Text Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="paymentSourceSelector" layoutX="358.0" layoutY="36.0" prefHeight="25.0" prefWidth="213.0" />
+   </children>
+</AnchorPane>

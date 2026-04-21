@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.TransferAccountController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="750.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/transferaccountsec.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="helpButton" layoutX="659.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="47.0" prefWidth="116.0" style="-fx-background-color: transparent;;" />
+      <ComboBox fx:id="fromAccountSelector" layoutX="81.0" layoutY="217.0" prefHeight="25.0" prefWidth="204.0" />
+      <ComboBox fx:id="toAccountSelector" layoutX="444.0" layoutY="219.0" prefHeight="25.0" prefWidth="204.0" />
+      <TextField fx:id="transferAmountField" alignment="CENTER_RIGHT" layoutX="243.0" layoutY="323.0" prefHeight="35.0" prefWidth="268.0" style="-fx-border-color: transparent;; -fx-background-color: transparent;;" />
+      <Button fx:id="transferButton" layoutX="319.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleTransfer" prefHeight="35.0" prefWidth="116.0" text="TRANSFER!">
+         <font>
+            <Font name="Jokerman" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="74.0" layoutY="430.0" prefHeight="40.0" prefWidth="601.0" text="Label" textAlignment="RIGHT" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Myanmar Text Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

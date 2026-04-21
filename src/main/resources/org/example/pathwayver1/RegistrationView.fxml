@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.RegistrationController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/Untitled251_20260328215743.jpeg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="step0Pane" layoutX="38.0" layoutY="39.0" prefHeight="536.0" prefWidth="824.0">
+         <children>
+            <ImageView fitHeight="536.0" fitWidth="839.0" layoutX="-7.0" layoutY="-7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328232156.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="200.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleStartRegister" prefHeight="35.0" prefWidth="141.0" text="YES!">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="458.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="68.0" prefWidth="193.0" text="NOT YET!">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="step1Pane" layoutX="31.0" layoutY="32.0" prefHeight="536.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="839.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328221657.jpeg" />
+               </image>
+            </ImageView>
+            <Text fill="#655e5e" layoutX="223.0" layoutY="194.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="PLEASE ENTER YOUR..." textAlignment="CENTER" wrappingWidth="346.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="250.0" layoutY="232.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="250.0" layoutY="345.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="firstNameField" layoutX="251.0" layoutY="238.0" prefHeight="25.0" prefWidth="281.0" />
+            <Text fill="#655e5e" layoutX="219.0" layoutY="306.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="AND..." textAlignment="CENTER" wrappingWidth="346.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <TextField fx:id="lastNameField" layoutX="251.0" layoutY="351.0" prefHeight="25.0" prefWidth="281.0" />
+            <Text fill="WHITE" layoutX="338.0" layoutY="493.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STEP 1 OF 5">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="38.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="698.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleNext1" prefHeight="36.0" prefWidth="96.0" text="NEXT &gt;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel1" alignment="CENTER" layoutX="48.0" layoutY="425.0" prefHeight="23.0" prefWidth="737.0" text="Label" textFill="#ffebdb">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="step2Pane" layoutX="32.0" layoutY="34.0" prefHeight="543.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="839.0" layoutX="-1.0" layoutY="5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328223420.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="30.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="698.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleNext2" prefHeight="36.0" prefWidth="96.0" text="NEXT &gt;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="337.0" layoutY="491.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STEP 2 OF 5">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="38.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleBack2" prefHeight="36.0" prefWidth="96.0" text="&lt; BACK">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Text fill="#655e5e" layoutX="234.0" layoutY="187.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="PLEASE ENTER YOUR..." textAlignment="CENTER" wrappingWidth="346.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="223.0" layoutY="342.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE NUMBER:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#655e5e" layoutX="206.0" layoutY="309.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="AND..." textAlignment="CENTER" wrappingWidth="346.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="223.0" layoutY="239.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL ADDRESS:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="phoneField" layoutX="223.0" layoutY="354.0" prefHeight="25.0" prefWidth="281.0" />
+            <TextField fx:id="emailField" layoutX="223.0" layoutY="252.0" prefHeight="25.0" prefWidth="281.0" />
+            <Label fx:id="errorLabel2" alignment="CENTER" layoutX="46.0" layoutY="397.0" prefHeight="68.0" prefWidth="748.0" text="Label" textFill="#ffebdb">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="step3Pane" layoutX="35.0" layoutY="31.0" prefHeight="553.0" prefWidth="833.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="824.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328224042.jpeg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="333.0" layoutY="494.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STEP 3 OF 5">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="46.0" layoutY="49.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="695.0" layoutY="470.0" mnemonicParsing="false" onAction="#handleNext3" prefHeight="36.0" prefWidth="96.0" text="NEXT &gt;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="46.0" layoutY="470.0" mnemonicParsing="false" onAction="#handleBack3" prefHeight="36.0" prefWidth="96.0" text="&lt; BACK">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Text fill="#655e5e" layoutX="262.0" layoutY="173.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="PLEASE ENTER YOUR ADDRESS!" textAlignment="CENTER" underline="true" wrappingWidth="422.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="320.0" layoutY="216.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STREET:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="320.0" layoutY="261.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CITY:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="319.0" layoutY="306.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STATE:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="318.0" layoutY="355.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ZIP CODE:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="316.0" layoutY="398.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="COUNTRY:">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Label fx:id="errorLabel3" alignment="CENTER" layoutX="59.0" layoutY="428.0" prefHeight="23.0" prefWidth="722.0" text="Label" textFill="#ffebdb">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="streetField" layoutX="445.0" layoutY="196.0" prefHeight="25.0" prefWidth="281.0" />
+            <TextField fx:id="cityField" layoutX="445.0" layoutY="241.0" prefHeight="25.0" prefWidth="281.0" />
+            <TextField fx:id="stateField" layoutX="445.0" layoutY="286.0" prefHeight="25.0" prefWidth="281.0" />
+            <TextField fx:id="zipField" layoutX="445.0" layoutY="335.0" prefHeight="25.0" prefWidth="281.0" />
+            <TextField fx:id="countryField" layoutX="445.0" layoutY="378.0" prefHeight="25.0" prefWidth="281.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="step4Pane" layoutX="35.0" layoutY="33.0" prefHeight="543.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="833.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328225244.jpeg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="334.0" layoutY="493.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STEP 4 OF 5">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="45.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="695.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleNext4" prefHeight="36.0" prefWidth="96.0" text="NEXT &gt;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="45.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleBack4" prefHeight="36.0" prefWidth="96.0" text="&lt; BACK">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel4" alignment="CENTER" layoutX="50.0" layoutY="414.0" prefHeight="48.0" prefWidth="722.0" text="Label" textFill="#ffebdb">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="#655e5e" layoutX="165.0" layoutY="167.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="PLEASE ENTER YOUR DATE OF BIRTH!" textAlignment="CENTER" underline="true" wrappingWidth="504.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="228.0" layoutY="213.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" width="412.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8026315569877625" green="0.7506091594696045" blue="0.7506091594696045" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.8026315569877625" green="0.7506091594696045" blue="0.7506091594696045" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Text fill="WHITE" layoutX="241.0" layoutY="238.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTH (MM)">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="403.0" layoutY="239.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DAY(DD)">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="513.0" layoutY="239.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="YEAR(YYYY)">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="383.0" layoutY="238.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="499.0" layoutY="238.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="birthMonthField" alignment="CENTER" layoutX="256.0" layoutY="259.0" prefHeight="25.0" prefWidth="101.0" />
+            <TextField fx:id="birthDayField" alignment="CENTER" layoutX="384.0" layoutY="259.0" prefHeight="25.0" prefWidth="101.0" />
+            <TextField fx:id="birthYearField" alignment="CENTER" layoutX="513.0" layoutY="259.0" prefHeight="25.0" prefWidth="101.0" />
+            <Text fill="WHITE" layoutX="369.0" layoutY="279.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="496.0" layoutY="279.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="step5Pane" layoutX="35.0" layoutY="33.0" prefHeight="543.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="833.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260329141814.jpeg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16191b" height="274.0" layoutX="42.0" layoutY="164.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" width="756.0" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="195.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME FIELDS" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="230.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST NAME:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="266.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LAST NAME:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="308.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRIC COMM." underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="343.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="379.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE#:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="421.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF BIRTH:" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="190.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADDRESS FIELDS" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="225.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STREET:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="261.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CITY:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="295.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STATE:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="331.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ZIP CODE:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="420.0" layoutY="367.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="COUNTRY:">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="confirmFirstName" editable="false" layoutX="172.0" layoutY="211.0" prefHeight="25.0" prefWidth="217.0" />
+            <TextField fx:id="confirmLastName" editable="false" layoutX="172.0" layoutY="247.0" prefHeight="25.0" prefWidth="217.0" />
+            <TextField fx:id="confirmEmail" editable="false" layoutX="128.0" layoutY="324.0" prefHeight="25.0" prefWidth="261.0" />
+            <TextField fx:id="confirmPhone" editable="false" layoutX="143.0" layoutY="360.0" prefHeight="25.0" prefWidth="217.0" />
+            <TextField fx:id="confirmDOB" editable="false" layoutX="203.0" layoutY="402.0" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="confirmStreet" editable="false" layoutX="518.0" layoutY="206.0" prefHeight="25.0" prefWidth="273.0" />
+            <TextField fx:id="confirmCity" editable="false" layoutX="518.0" layoutY="242.0" prefHeight="25.0" prefWidth="273.0" />
+            <TextField fx:id="confirmState" editable="false" layoutX="518.0" layoutY="276.0" prefHeight="25.0" prefWidth="273.0" />
+            <TextField fx:id="confirmZip" editable="false" layoutX="518.0" layoutY="312.0" prefHeight="25.0" prefWidth="273.0" />
+            <TextField fx:id="confirmCountry" editable="false" layoutX="518.0" layoutY="348.0" prefHeight="25.0" prefWidth="273.0" />
+            <Button layoutX="47.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="659.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleNext5" prefHeight="36.0" prefWidth="132.0" text="CORRECT! &gt;">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="47.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleBack5" prefHeight="36.0" prefWidth="146.0" text="&lt; NOT QUITE...">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="step6Pane" layoutX="35.0" layoutY="33.0" prefHeight="543.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="839.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260328230110.jpeg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="357.0" layoutY="491.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="STEP 5 OF 5">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="36.0" prefWidth="96.0" text="CANCEL">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="350.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="36.0" prefWidth="141.0" text="REGISTER!" textFill="#544e3d" underline="true">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="45.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleBack6" prefHeight="36.0" prefWidth="96.0" text="&lt; BACK">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel6" alignment="CENTER" layoutX="37.0" layoutY="412.0" prefHeight="23.0" prefWidth="756.0" text="Label" textFill="#ffebdb">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="#655e5e" layoutX="131.0" layoutY="225.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="UserID:" textAlignment="CENTER" wrappingWidth="193.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <Text fill="#655e5e" layoutX="147.0" layoutY="281.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="Password:" textAlignment="CENTER" wrappingWidth="193.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <TextField fx:id="userIDField" layoutX="324.0" layoutY="202.0" prefHeight="32.0" prefWidth="261.0" />
+            <Text fill="#655e5e" layoutX="101.0" layoutY="329.0" stroke="WHITE" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="6.0" text="Confirm Password:" textAlignment="CENTER" wrappingWidth="239.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="passwordField" layoutX="324.0" layoutY="258.0" prefHeight="32.0" prefWidth="261.0" />
+            <PasswordField fx:id="confirmPasswordField" layoutX="350.0" layoutY="303.0" prefHeight="32.0" prefWidth="261.0" />
+            <Label fx:id="credentialHintLabel" alignment="CENTER" layoutX="634.0" layoutY="169.0" prefHeight="168.0" prefWidth="153.0" text="Label" wrapText="true">
+               <font>
+                  <Font name="Bell MT Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="step7Pane" layoutX="35.0" layoutY="33.0" prefHeight="543.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="543.0" fitWidth="839.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/Untitled251_20260329142119.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="330.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleOkay" prefHeight="68.0" prefWidth="179.0" text="OKAY!" textFill="#544e3d" underline="true">
+               <effect>
+                  <Glow level="0.45" />
+               </effect>
+               <font>
+                  <Font name="Jokerman" size="32.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
