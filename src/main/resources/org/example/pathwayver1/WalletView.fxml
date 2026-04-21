@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pathwayver1.WalletController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/walletsection.drawio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="helpButton" layoutX="809.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: transparent;;" />
+      <Button fx:id="backButton" layoutX="13.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="59.0" prefWidth="136.0" style="-fx-background-color: transparent;;" />
+      <ScrollPane fx:id="walletScrollPane" hbarPolicy="NEVER" layoutX="141.0" layoutY="350.0" prefHeight="211.0" prefWidth="640.0" style="-fx-background-color: transparent;; -fx-background: transparent;;">
+         <content>
+            <VBox fx:id="walletHistoryList" prefHeight="215.0" prefWidth="621.0" style="-fx-background-color: transparent;;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="walletBalanceLabel" alignment="CENTER_RIGHT" layoutX="299.0" layoutY="172.0" prefHeight="40.0" prefWidth="329.0" text="Label" textAlignment="RIGHT" textFill="#16911b">
+         <font>
+            <Font name="Myanmar Text Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
