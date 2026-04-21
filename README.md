@@ -315,3 +315,97 @@ This directory is excluded from version control through the **.gitignore file**,
 ### Module Configuration
 
 The **module-info.java** file located in **src/main/java/** declares the application's module dependencies, granting access to JavaFX controls, FXML loading, and graphics rendering, and opens the application package for reflection based FXML injection.
+
+
+
+## Financial Mechanics
+
+Pathway Banking simulates a complete personal finance environmenet where every dollar is tracked and every decision carries weight. The financial systems within the application were designed to mirror real world banking principles, while remaining approachable enough for younger users to grasp through hands on interaction.
+
+### Starting Balances
+
+When a new user registers an account, they begin with $245 in their Wallet and $55 in a default Debit account, totaling $300 in available funds. This starting amount is intentionally established, enough to explore the application's features and unlock additional accounts, but limited enough that careless spending has noticeable consequences.
+
+### Wallet
+
+The Wallet acts as the user's virtual cash on hand, separate from all banking accounts. It is the central hub through which most money flows. Deposits into bank accounts are funded from the Wallet, withdrawals from the Debit account return money to the Wallet, and all scenario rewards are deposited directly into the Wallet. 
+
+When a user carries pending debt from scenario outcomes, any money entering the Wallet is automatically applied toward that debt before becoming available. Reinforcing the reality that obligations can take priority over spending power.
+
+### Debit Account
+
+The Debit account is the user's default and permanent banking account. It cannot be deleted. Money can be deposited into it from the Wallet and withdrawn back to the Wallet freely. The Debit account serves as the primary funding source for account unlock down payments, contact transfers, and credit card payments. 
+
+When the Debit balance drops below $50, the user receives a low balance warning notification in their Inbox. This warning triggers once per drop below the threshold and resets when the balance is restored above $50, allowing it to trigger again on future drops.
+
+### Savings Account
+
+Savings accounts are unlocked by making a $100 down payment from the Debit account. They are designed to encourage long term saving by making it intentionally inconvenient to withdraw funds. 
+
+Users cannot withdraw directly from Savings, they must use the Transfer feature to move money to their Debit account. 
+This transfer is subject to a tiered fee structure: the first 3 transfers are free, transfers 4 through 9 cost $3 each, and all transfers after that cost $6 each. 
+
+If the user's Savings balance is less than or equal to the fee amount, the fee is waived entirely to prevent the user from being trapped with inaccessible funds. 
+
+Users can deposit directly into Savings from the Wallet at any time without restriction. When deleting a Savings account, all remaining funds must be transferred to the Debit account first. The $100 down payment is not refunded, teaching users that financial decisions carry permanent costs.
+
+### Credit Account
+Credit accounts are unlocked by making a $150 down payment from the Debit account. 
+
+Each Credit account comes with a $500 credit limit, representing the maximum amount of debt the user can carry on that card. The available credit is calculated as the credit limit minus the current balance owed. 
+
+Charges are added to the Credit account automatically when scenario outcomes deduct money and the user's Wallet cannot cover the cost. The system charges the Credit card before touching the Debit account. 
+
+Users can also choose to pay subscriptions using their Credit card, which adds to their balance owed.
+
+### Minimum Payment and Late Fees
+
+Each Credit account has a minimum payment requirement calculated as 10% of the balance owed, with a floor of $5. 
+
+Every 20 minutes, a billing cycle check occurs. If the user has paid at least the minimum payment during that cycle, no late fee is applied and a notification confirms the minimum was met. 
+
+If the minimum payment was not met and a balance is still owed, a $10 late fee is added to the balance owed and a notification alerts the user. 
+
+Regardless of whether the minimum was met, the cycle resets, the minimum payment met flag clears and the due date pushes forward 20 minutes. This system teaches users that paying only the minimum keeps them safe from penalties but does not eliminate their debt, while failing to pay even the minimum results in compounding fees.
+
+### Subscription Billing
+
+Subscriptions acquired through scenario outcomes operate on a 20-minute billing cycle. 
+
+When a subscription is first obtained, its status is set to Paid and a due date is set 20 minutes in the future. 
+
+When the due date passes, the subscription transitions to Unpaid and a new 20-minute grace period begins. 
+
+If the user pays the full subscription amount during this grace period, the status returns to Paid and the cycle resets. If the grace period expires while the subscription is still Unpaid, a $5 late fee is added to the subscription's recurring cost and the due date pushes forward another 20 minutes. 
+
+This late fee stacks with each missed cycle, meaning a $5 subscription that goes unpaid for three cycles would cost $20 to pay off. 
+
+However, once the user pays, the recurring cost resets to the original base amount. The late fees are a one time penalty, not a permanent price increase. Subscriptions cannot be cancelled while in an Unpaid state, forcing the user to settle their bill before they can walk away.
+
+### Pending Debt
+
+When a scenario deducts money and the user cannot cover the full amount through their Wallet, Credit cards, or Debit account, the remaining balance becomes pending debt. 
+
+This debt sits in the background and is automatically paid off whenever new funds enter the Wallet: scenario rewards, random contact transfers, and withdrawals all pass through the Wallet and trigger the auto-payment check. 
+
+Users can also manually pay down their pending debt from the Payment section in Deposit and Withdraw. When a user unlocks a new Credit account while carrying pending debt, the outstanding amount is automatically charged to the new card and a notification explains what happened, simulating how real world debt follows you regardless of which accounts you open.
+
+### Deduction Priority
+
+When a scenario outcome results in a financial loss, the application follows a strict deduction order. 
+
+The Wallet is checked first, if it has enough funds, the full amount is taken from the Wallet. 
+
+If the Wallet cannot cover the total, whatever is available is taken and the remaining balance moves to Credit cards. 
+
+If multiple Credit cards exist, each is charged up to its available credit in the order they were unlocked, with partial charges splitting across cards when necessary. 
+
+If all Credit cards are maxed out, the Debit account is tapped next. 
+
+If the Debit account also cannot cover the remaining balance, whatever is left becomes pending debt. 
+
+Transfer-related scenarios bypass this system entirely. The money only moves when the user completes the actual transfer, either immediately through the prompt or later through the Payment section.
+
+### Random Contact Transfers
+
+Every minute while the application is running, there is a chance that one of the user's nine simulated contacts will send them a random transfer between $5 and $25. These transfers are deposited directly into the Wallet and trigger the auto-payment check for pending debt. A notification appears in the Inbox identifying which contact sent the money and how much was received.
