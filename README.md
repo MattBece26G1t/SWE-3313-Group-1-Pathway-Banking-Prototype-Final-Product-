@@ -183,3 +183,5 @@ Required for dependency management and building the project. Maven reads the pom
 Only required if you intend to edit the application's FXML layout files! 
 
 It's not needed to simply run the application. If you do plan to work with the FXML files, it is strongly recommended to apply the performance adjustment described at the top of this document by adding "java-options=-Xmx2048m" to your SceneBuilder.cfg file, as the application's FXML files contain a significant number of image based components that may cause lag or freezing without the additional memory allocation.
+
+## How to Run
