@@ -56,6 +56,22 @@ Including the line increased the memory capacity of Scenebuilder from its usualy
 Because everyone's operating system is different, the application primairly consists of multiple PNG backdrops and elements, as a method to optimize performance while working in Scenebuilder. Desiging visual properties was discovered to be a major source of slowing down the work space/interface. Instead, as a work around to not overload the IDE with to many components, any visual components such as icons, drawings, and backdrops were designed outside of Scenebuilder, using Draw.io. Scenebuilder would only be used to give these designed elements the impression of functionality, by first importing the designs and then stacking built-in Scenebuilder elements over it, such as buttons, labels, and comboboxes on to the scene. Pre-designing the visual elements that shape the Pathway Banking identity, before implementing in Scenebuilder saved alot of performance issues encountered. Also sparing the effort of a team member's operating system can handle.
 
 
+## Table of Contents for this README.md
+
+- **Demonstration Clips** — Video clips presenting the Pathway Banking application in action
+- **Project Overview** — Brief description of what Pathway Banking is, its purpose, target audience ages 5 and up, and educational goals
+- **Features** — Comprehensive list of all major features the application offers
+- **Tech Stack** — Technologies and tools used including JavaFX, SceneBuilder, Maven, Java 21, and Draw.io
+- **Prerequisites** — Software requirements needed to compile and run the application
+- **How to Run** — Step by step instructions to clone the repository and run the project in IntelliJ IDEA
+- **Project Structure** — Overview of the folder layout, source files, resources, and data persistence
+- **Financial Mechanics** — Explanation of how the simulated banking system works including wallet flow, credit limits, fees, billing cycles, and pending debt
+- **Scenario System** — How the educational scenarios work including categories, difficulty levels, mandatory interrupts, and contact transfers
+- **Known Limitations** — Acknowledged constraints of the prototype including data persistence scope, billing cycle timing, and grading simplicity
+
+## Demonstration Clips
+
+
 ## Project Overview
 
 Pathway Banking is a prototype desktop financial learning application designed to introduce users of all ages, particularly focused on younger users from ages 5 and up, to the fundamentals of personal finance and money management. Built as a simulated banking environment, the application provides a safe, offline space where users can interact with realistic financial tools and concepts without the consequences of using real money. The experience is intended to nearly replicate the experience of using an existing banking application, with additions that makes this project have a entirely unique educational identity. Additional elements that are used to emulate financial scenarios and actions that are not commonly found in realistic banking systems.
