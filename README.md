@@ -83,51 +83,51 @@ The following clips are a presented runtime provided by the Team Leader to showc
 
 ### Pathway Banking - Reset Password
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Reset Password](https://img.youtube.com/vi/pwIW1DbdRH0/0.jpg)](https://www.youtube.com/watch?v=pwIW1DbdRH0)
 
 ### Pathway Banking - General Interface Tour of Application
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB General Interface Tour of Application](https://img.youtube.com/vi/j_DCpHrWfzM/0.jpg)](https://www.youtube.com/watch?v=j_DCpHrWfzM)
 
 ### Pathway Banking - Depositing and Withdrawing Features
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Depositing and Withdrawing Features](https://img.youtube.com/vi/GSzCMOhFm9g/0.jpg)](https://www.youtube.com/watch?v=GSzCMOhFm9g)
 
 ### Pathway Banking - Transferring Features
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Transferring Features](https://img.youtube.com/vi/GY8e-L1RwKU/0.jpg)](https://www.youtube.com/watch?v=GY8e-L1RwKU)
 
 ### Pathway Banking - Paying Off Credit Account and Brief Scenario Feature Introduction
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Paying Off Credit Account and Brief Scenario Feature Introduction](https://img.youtube.com/vi/nmgs6rgY1wU/0.jpg)](https://www.youtube.com/watch?v=nmgs6rgY1wU)
 
 ### Pathway Banking - Scenario Run Through 1
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Scenario Run Through 1](https://img.youtube.com/vi/h6_Curqhu-M/0.jpg)](https://www.youtube.com/watch?v=h6_Curqhu-M)
 
 ### Pathway Banking - Scenario Run Through 2
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Scenario Run Through 2](https://img.youtube.com/vi/-zSp0Cmq8Ys/0.jpg)](https://www.youtube.com/watch?v=-zSp0Cmq8Ys)
 
 ### Pathway Banking - Scenario Run Through 3 and Their Outcomes
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Scenario Run Through 3 and Their Outcomes](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ### Pathway Banking - Pending Debt and Other Subscriptions
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Pending Debt and Other Subscriptions](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ### Pathway Banking - Mandatory Scenario, Editing Inside of Settings, and Paying Off Late Fee or Subscriptions
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Mandatory Scenario, Editing Inside of Settings, and Paying Off Late Fee or Subscriptions](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ### Pathway Banking - Existence of Multiple Account Logins and Preserving Their Data
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Existence of Multiple Account Logins and Preserving Their Data](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ### Pathway Banking - Help Section Tour
 
-[![PB ](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Help Section Tour](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 
 
