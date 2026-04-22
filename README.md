@@ -71,6 +71,12 @@ Because everyone's operating system is different, the application primairly cons
 
 ## Demonstration Clips
 
+The following clips are a presented runtime provided by the Team Leader to showcase the most capabilities out of the application
+
+### Pathway Banking - Opening Application and New Account Registration
+
+[![PB Opening Application and New Account Registration Demo](https://img.youtube.com/vi/a9_FuskVbRc/0.jpg)](https://www.youtube.com/watch?v=a9_FuskVbRc)
+
 
 ## Project Overview
 
