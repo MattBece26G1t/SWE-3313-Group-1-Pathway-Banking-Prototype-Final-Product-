@@ -73,6 +73,8 @@ Because everyone's operating system is different, the application primairly cons
 
 The following clips are a presented runtime provided by the Team Leader to showcase the most capabilities out of the application. These videos are Unlisted Youtube Videos, clicking the thumbnail will transition you to the unlisted video. The titles in each video highlight the main focus of the clip, however there may also be additional feature content presented that does not exactly reflect the video title.
 
+Click on the thumbnail image to watch the video!
+
 ### Pathway Banking - Opening Application and New Account Registration
 
 [![PB Opening Application and New Account Registration Demo](https://img.youtube.com/vi/a9_FuskVbRc/0.jpg)](https://www.youtube.com/watch?v=a9_FuskVbRc)
