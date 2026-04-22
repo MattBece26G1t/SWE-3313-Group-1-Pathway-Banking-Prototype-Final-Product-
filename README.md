@@ -223,7 +223,7 @@ Provided the graphical user interface framework. Every screen in the application
 
 ### SceneBuilder 25
 
-Used as the visual layout editor for all FXML files. Each of the application's 18 screens was designed in SceneBuilder, where backdrop images, buttons, labels, text fields, and other interactive elements were positioned and configured before being wired to their corresponding Java controllers.
+Used as the visual layout editor for all FXML files. Each of the application's 23 screens was designed in SceneBuilder, where backdrop images, buttons, labels, text fields, and other interactive elements were positioned and configured before being wired to their corresponding Java controllers.
 
 ### Maven
 
