@@ -113,23 +113,23 @@ Click on the thumbnail image to watch the video!
 
 ### Pathway Banking - Scenario Run Through 3 and Their Outcomes
 
-[![PB Scenario Run Through 3 and Their Outcomes](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Scenario Run Through 3 and Their Outcomes](https://img.youtube.com/vi/mrekwcct7JE/0.jpg)](https://www.youtube.com/watch?v=mrekwcct7JE)
 
 ### Pathway Banking - Pending Debt and Other Subscriptions
 
-[![PB Pending Debt and Other Subscriptions](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Pending Debt and Other Subscriptions](https://img.youtube.com/vi/zJxziFo3_LI/0.jpg)](https://www.youtube.com/watch?v=zJxziFo3_LI)
 
 ### Pathway Banking - Mandatory Scenario, Editing Inside of Settings, and Paying Off Late Fee or Subscriptions
 
-[![PB Mandatory Scenario, Editing Inside of Settings, and Paying Off Late Fee or Subscriptions](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Mandatory Scenario, Editing Inside of Settings, and Paying Off Late Fee or Subscriptions](https://img.youtube.com/vi/QigmpsWVD5w/0.jpg)](https://www.youtube.com/watch?v=QigmpsWVD5w)
 
 ### Pathway Banking - Existence of Multiple Account Logins and Preserving Their Data
 
-[![PB Existence of Multiple Account Logins and Preserving Their Data](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Existence of Multiple Account Logins and Preserving Their Data](https://img.youtube.com/vi/oIB5B_d8m_k/0.jpg)](https://www.youtube.com/watch?v=oIB5B_d8m_k)
 
 ### Pathway Banking - Help Section Tour
 
-[![PB Help Section Tour](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![PB Help Section Tour](https://img.youtube.com/vi/N04RhXfwLzc/0.jpg)](https://www.youtube.com/watch?v=N04RhXfwLzc)
 
 
 
