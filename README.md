@@ -271,7 +271,7 @@ Follow these steps to clone the repository and run Pathway Banking on to your lo
 
 **Step 3 - Verify Project Structure:** Once the project has loaded, confirm the project structure is intact. View the project panel on the left side of IntelliJ and confirm its file strcture matches similarly to the presentation of the GitHub files
 
-**Step 4 - Configure the Run Configuration:** In most cases, IntelliJ will automatically detect the main class. If it does not, you can set it up manually. Go to "Run" in the top menu bar, select "Edit Configurations," click the "+" button to add a new Application configuration, and set the Main Class to org.example.pathwayver1.Launcher. Click "Apply" and then "OK."
+**Step 4 - Configure the Run Configuration:** In most cases, IntelliJ will automatically detect the main class. If it does not, you can set it up manually. Go to "Run" in the top menu bar, select "Edit Configurations," click the "+" button to add a new Application configuration, and set the Main Class to org.example.pathwayver1.Launcher. Click "Apply" and then "OK." May require for you to set up a JDK to get JavaFX to run such as BellSoft’s Liberica or Oracle OpenJDK 25.
 
 **Step 5 - Run the Application:** Click the green Run button in the top right corner of IntelliJ, or press Shift+F10. Maven will compile the project and launch the application. The Pathway Banking login screen should appear in a 900x600 window.
 
